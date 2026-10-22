@@ -1,0 +1,61 @@
+sku_id,upc,product_name,category,cost_price,selling_price,margin_pct,is_perishable,shelf_life_days,storage_type,supplier_lead_time_mean,supplier_lead_time_std,baseline_tier
+SKU-GROC-0001,000195822412,Whole Milk 1 Gallon,Dairy & Eggs,2.4,3.89,0.383,True,12,Chilled,2.0,0.4,Fast-mover
+SKU-GROC-0002,000224942603,Organic Large Brown Eggs 12ct,Dairy & Eggs,2.6,4.49,0.4209,True,28,Chilled,2.2,0.5,Fast-mover
+SKU-GROC-0003,000313356886,Salted Butter 16oz,Dairy & Eggs,2.8,4.99,0.4389,True,60,Chilled,3.0,0.6,Moderate-mover
+SKU-GROC-0004,000446913810,Greek Yogurt Plain 32oz,Dairy & Eggs,2.7,4.79,0.4363,True,21,Chilled,2.5,0.5,Moderate-mover
+SKU-GROC-0005,000542868828,Shredded Sharp Cheddar 8oz,Dairy & Eggs,1.7,3.29,0.4833,True,45,Chilled,3.0,0.5,Moderate-mover
+SKU-GROC-0006,000639958838,Aged Artisan Gouda Wedge 6oz,Dairy & Eggs,5.8,9.99,0.4194,True,50,Chilled,5.0,1.2,Slow-mover
+SKU-GROC-0007,000728728463,Truffle Infused Goat Cheese 4oz,Dairy & Eggs,6.5,11.49,0.4343,True,25,Chilled,6.0,1.5,Deadstock-candidate
+SKU-GROC-0008,000823756669,Artisan French Sourdough,Bakery,1.8,4.29,0.5804,True,4,Ambient,1.5,0.3,Fast-mover
+SKU-GROC-0009,000983197857,Whole Wheat Sandwich Bread 20oz,Bakery,1.4,3.19,0.5611,True,7,Ambient,1.8,0.3,Fast-mover
+SKU-GROC-0010,001021668732,Butter Croissants 4-Pack,Bakery,2.3,4.89,0.5297,True,4,Ambient,1.8,0.4,Moderate-mover
+SKU-GROC-0011,001189254563,Brioche Burger Buns 6ct,Bakery,1.9,3.99,0.5238,True,8,Ambient,2.0,0.4,Moderate-mover
+SKU-GROC-0012,001266629388,Gluten-Free Seeded Loaf,Bakery,3.8,6.99,0.4564,True,6,Ambient,3.5,0.8,Slow-mover
+SKU-GROC-0013,001314265799,Hass Avocados (Single),Fresh Produce,0.65,1.49,0.5638,True,6,Ambient,2.0,0.4,Fast-mover
+SKU-GROC-0014,001413999315,Organic Bananas 1 Bunch,Fresh Produce,0.7,1.69,0.5858,True,5,Ambient,1.8,0.3,Fast-mover
+SKU-GROC-0015,001522575562,Honeycrisp Apples 3lb Bag,Fresh Produce,2.9,5.49,0.4718,True,18,Chilled,2.5,0.5,Fast-mover
+SKU-GROC-0016,001639345092,Fresh Baby Spinach 5oz Clamshell,Fresh Produce,1.2,2.99,0.5987,True,6,Chilled,1.8,0.3,Fast-mover
+SKU-GROC-0017,001741227216,Organic Roma Tomatoes 1lb,Fresh Produce,1.1,2.49,0.5582,True,8,Ambient,2.0,0.4,Moderate-mover
+SKU-GROC-0018,001877827638,Fresh Garlic Bulb 3-Pack,Fresh Produce,0.6,1.79,0.6648,True,30,Ambient,3.0,0.6,Moderate-mover
+SKU-GROC-0019,001990801586,Fresh English Cucumber,Fresh Produce,0.55,1.39,0.6043,True,10,Chilled,2.0,0.4,Moderate-mover
+SKU-GROC-0020,002013561597,Dragon Fruit (Yellow Pitahaya),Fresh Produce,3.9,6.99,0.4421,True,7,Ambient,4.5,1.0,Slow-mover
+SKU-GROC-0021,002185329037,Romanesco Cauliflower Head,Fresh Produce,3.2,5.99,0.4658,True,6,Chilled,4.0,1.0,Deadstock-candidate
+SKU-GROC-0022,002236687537,Boneless Skinless Chicken Breasts 2lb,Meat & Seafood,5.2,9.49,0.4521,True,5,Chilled,2.0,0.4,Fast-mover
+SKU-GROC-0023,002397226012,Ground Beef 80/20 1lb,Meat & Seafood,3.1,5.99,0.4825,True,5,Chilled,2.0,0.4,Fast-mover
+SKU-GROC-0024,002483140807,Atlantic Salmon Fillet 1lb,Meat & Seafood,7.4,12.99,0.4303,True,4,Chilled,2.2,0.5,Moderate-mover
+SKU-GROC-0025,002566306997,Thick Cut Smoked Bacon 16oz,Meat & Seafood,3.8,6.79,0.4404,True,30,Chilled,3.0,0.5,Moderate-mover
+SKU-GROC-0026,002639587039,Prime NY Strip Steak 12oz,Meat & Seafood,9.5,16.99,0.4408,True,5,Chilled,3.0,0.6,Moderate-mover
+SKU-GROC-0027,002770291817,Wild Boar Salami Link 7oz,Meat & Seafood,7.8,14.5,0.4621,True,45,Chilled,6.0,1.2,Deadstock-candidate
+SKU-GROC-0028,002889089901,Italian Penne Rigate 16oz,Pantry & Staples,0.9,1.99,0.5477,False,720,Ambient,3.5,0.7,Fast-mover
+SKU-GROC-0029,002947338124,Spaghetti Pasta 16oz,Pantry & Staples,0.85,1.89,0.5503,False,720,Ambient,3.5,0.7,Fast-mover
+SKU-GROC-0030,003010872248,Marinara Pasta Sauce 24oz Jar,Pantry & Staples,1.8,3.99,0.5489,False,540,Ambient,3.5,0.7,Fast-mover
+SKU-GROC-0031,003131429110,Extra Virgin Olive Oil 500ml,Pantry & Staples,5.4,9.99,0.4595,False,365,Ambient,4.0,0.8,Moderate-mover
+SKU-GROC-0032,003266722344,Jasmine Rice 5lb Bag,Pantry & Staples,3.6,6.99,0.485,False,720,Ambient,4.0,0.8,Moderate-mover
+SKU-GROC-0033,003355667651,Black Beans Canned 15oz,Pantry & Staples,0.5,1.29,0.6124,False,1080,Ambient,3.0,0.5,Fast-mover
+SKU-GROC-0034,003447295260,Artisanal White Truffle Oil 250ml,Pantry & Staples,12.0,24.99,0.5198,False,365,Ambient,7.0,1.5,Deadstock-candidate
+SKU-GROC-0035,003530868105,Organic Quinoa Grain 16oz,Pantry & Staples,2.4,4.99,0.519,False,540,Ambient,4.0,0.8,Slow-mover
+SKU-GROC-0036,003638898923,Granulated Pure Cane Sugar 4lb,Pantry & Staples,2.1,3.89,0.4602,False,1080,Ambient,3.0,0.5,Moderate-mover
+SKU-GROC-0037,003755176955,Tortilla Corn Chips 12oz,Snacks & Confectionery,1.6,3.79,0.5778,False,180,Ambient,2.5,0.5,Fast-mover
+SKU-GROC-0038,003823718431,Medium Restaurant Style Salsa 16oz,Snacks & Confectionery,1.7,3.99,0.5739,False,365,Ambient,3.0,0.5,Fast-mover
+SKU-GROC-0039,003922448136,Classic Potato Chips Sea Salt 8oz,Snacks & Confectionery,1.5,3.49,0.5702,False,150,Ambient,2.5,0.4,Fast-mover
+SKU-GROC-0040,004060992979,Dark Chocolate Sea Salt Bar 3.5oz,Snacks & Confectionery,1.4,2.99,0.5318,False,365,Ambient,3.5,0.6,Moderate-mover
+SKU-GROC-0041,004122981052,Roasted Salted Almonds 12oz,Snacks & Confectionery,4.2,7.99,0.4743,False,270,Ambient,3.5,0.6,Moderate-mover
+SKU-GROC-0042,004258181396,Organic Honey Almond Granola 12oz,Snacks & Confectionery,2.8,5.49,0.49,False,210,Ambient,3.0,0.5,Moderate-mover
+SKU-GROC-0043,004356164955,Matcha Green Tea Wafers 5oz,Snacks & Confectionery,3.5,6.49,0.4607,False,180,Ambient,5.0,1.0,Slow-mover
+SKU-GROC-0044,004491030736,Organic Cold Brew Coffee 32oz,Beverages,3.1,5.99,0.4825,True,30,Chilled,2.5,0.5,Trending-star
+SKU-GROC-0045,004545503389,Sparkling Mineral Water 12-Pack,Beverages,3.4,6.99,0.5136,False,365,Ambient,3.0,0.5,Fast-mover
+SKU-GROC-0046,004615831819,Pure Orange Juice 52oz,Beverages,2.3,4.49,0.4878,True,24,Chilled,2.0,0.4,Fast-mover
+SKU-GROC-0047,004771662963,Classic Cola 12-Pack Cans,Beverages,3.8,7.49,0.4927,False,365,Ambient,2.5,0.5,Fast-mover
+SKU-GROC-0048,004881971316,Oat Milk Barista Blend 32oz,Beverages,2.2,4.29,0.4872,False,180,Ambient,3.0,0.5,Trending-star
+SKU-GROC-0049,004926753883,Organic Hibiscus Kombucha 16oz,Beverages,2.1,3.99,0.4737,True,45,Chilled,3.0,0.6,Moderate-mover
+SKU-GROC-0050,005060806024,Artisanal Sparkling Lavender Soda 4pk,Beverages,5.0,8.99,0.4438,False,180,Ambient,6.0,1.2,Deadstock-candidate
+SKU-GROC-0051,005120576383,Thin Crust Four Cheese Pizza 15oz,Frozen Foods,3.2,6.79,0.5287,False,270,Frozen,3.5,0.6,Fast-mover
+SKU-GROC-0052,005284093639,Organic Frozen Blueberries 16oz,Frozen Foods,2.6,4.99,0.479,False,365,Frozen,3.5,0.6,Moderate-mover
+SKU-GROC-0053,005349349722,Vanilla Bean Ice Cream Pint,Frozen Foods,2.5,5.29,0.5274,False,240,Frozen,3.0,0.5,Moderate-mover
+SKU-GROC-0054,005494374605,Spicy Black Bean Veggie Burgers 4ct,Frozen Foods,3.0,5.99,0.4992,False,270,Frozen,3.5,0.7,Moderate-mover
+SKU-GROC-0055,005593016315,Frozen Seaweed Salad Packets 8oz,Frozen Foods,4.8,8.49,0.4346,False,180,Frozen,5.5,1.2,Slow-mover
+SKU-GROC-0056,005658537831,Eco-Friendly Dish Soap 16oz,Household,1.9,3.99,0.5238,False,1080,Ambient,4.0,0.8,Moderate-mover
+SKU-GROC-0057,005787490893,Paper Towels 6 Double Rolls,Household,5.5,9.99,0.4494,False,1800,Ambient,3.5,0.7,Fast-mover
+SKU-GROC-0058,005835808537,Ultra Soft Bath Tissue 12 Mega Rolls,Household,6.8,12.49,0.4556,False,1800,Ambient,3.5,0.7,Fast-mover
+SKU-GROC-0059,005919335534,Lavender Multi-Surface Cleaner 28oz,Household,2.2,4.49,0.51,False,1080,Ambient,4.0,0.8,Moderate-mover
+SKU-GROC-0060,006016150444,Beeswax Furniture Polish 8oz,Household,5.9,10.99,0.4631,False,1080,Ambient,6.0,1.4,Deadstock-candidate

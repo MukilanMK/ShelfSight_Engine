@@ -1,0 +1,72 @@
+# Grocery Store ML System: Executive Summary Dashboard
+
+> **Operational Intelligence Report**: Synthesizes end-to-end models (Modules 1 through 6) to deliver actionable inventory optimization without static hardcoding.
+
+## 1. Top Trending SKUs
+*Identified via XGBoost sales velocity predictions combined with studentized $Z$-score trend acceleration.*
+
+| sku_id        | product_name                      | category               |   selling_price |   predicted_daily_velocity |   velocity_7d |   velocity_30d |   trend_acceleration_zscore |   trend_vitality_score |
+|:--------------|:----------------------------------|:-----------------------|----------------:|---------------------------:|--------------:|---------------:|----------------------------:|-----------------------:|
+| SKU-GROC-0001 | Whole Milk 1 Gallon               | Dairy & Eggs           |            3.89 |                       45.7 |       27      |        23.5667 |                   0.340911  |                  61.28 |
+| SKU-GROC-0046 | Pure Orange Juice 52oz            | Beverages              |            4.49 |                       39.6 |       26.1429 |        24.4    |                   0.197988  |                  47.44 |
+| SKU-GROC-0045 | Sparkling Mineral Water 12-Pack   | Beverages              |            6.99 |                       37.9 |       26.7143 |        24.5333 |                   0.237792  |                  46.91 |
+| SKU-GROC-0047 | Classic Cola 12-Pack Cans         | Beverages              |            7.49 |                       40.6 |       24.5714 |        24.2    |                   0.0331676 |                  41.95 |
+| SKU-GROC-0033 | Black Beans Canned 15oz           | Pantry & Staples       |            1.29 |                       32.3 |       26.7143 |        24.5333 |                   0.210014  |                  39.08 |
+| SKU-GROC-0029 | Spaghetti Pasta 16oz              | Pantry & Staples       |            1.89 |                       36.9 |       22.4286 |        23.2667 |                  -0.106442  |                  36.9  |
+| SKU-GROC-0028 | Italian Penne Rigate 16oz         | Pantry & Staples       |            1.99 |                       34.8 |       23.5714 |        27.2333 |                  -0.338725  |                  34.8  |
+| SKU-GROC-0039 | Classic Potato Chips Sea Salt 8oz | Snacks & Confectionery |            3.49 |                       28.7 |       25.2857 |        23.9    |                   0.13582   |                  32.6  |
+| SKU-GROC-0002 | Organic Large Brown Eggs 12ct     | Dairy & Eggs           |            4.49 |                       31.4 |       20.7143 |        23      |                  -0.29126   |                  31.4  |
+| SKU-GROC-0009 | Whole Wheat Sandwich Bread 20oz   | Bakery                 |            3.19 |                       27.1 |       26.2857 |        25.4    |                   0.109854  |                  30.08 |
+
+## 2. Restock Action List
+*Prioritized via classification urgency model and dynamic safety stock formulas based on lead time & demand variance.*
+
+| sku_id        | product_name                         | category               | restock_urgency_tier   |   ending_stock |   dynamic_safety_stock |   dynamic_reorder_point |   recommended_order_units |   estimated_order_cost |
+|:--------------|:-------------------------------------|:-----------------------|:-----------------------|---------------:|-----------------------:|------------------------:|--------------------------:|-----------------------:|
+| SKU-GROC-0058 | Ultra Soft Bath Tissue 12 Mega Rolls | Household              | CRITICAL_RESTOCK       |             20 |                     33 |                      93 |                       106 |                  720.8 |
+| SKU-GROC-0057 | Paper Towels 6 Double Rolls          | Household              | CRITICAL_RESTOCK       |              0 |                     32 |                      92 |                       125 |                  687.5 |
+| SKU-GROC-0047 | Classic Cola 12-Pack Cans            | Beverages              | CRITICAL_RESTOCK       |              0 |                     38 |                      99 |                       134 |                  509.2 |
+| SKU-GROC-0031 | Extra Virgin Olive Oil 500ml         | Pantry & Staples       | CRITICAL_RESTOCK       |              0 |                     22 |                      66 |                        90 |                  486   |
+| SKU-GROC-0051 | Thin Crust Four Cheese Pizza 15oz    | Frozen Foods           | CRITICAL_RESTOCK       |             12 |                     39 |                     119 |                       149 |                  476.8 |
+| SKU-GROC-0045 | Sparkling Mineral Water 12-Pack      | Beverages              | CRITICAL_RESTOCK       |             20 |                     38 |                     114 |                       134 |                  455.6 |
+| SKU-GROC-0015 | Honeycrisp Apples 3lb Bag            | Fresh Produce          | CRITICAL_RESTOCK       |             10 |                     29 |                      83 |                       103 |                  298.7 |
+| SKU-GROC-0042 | Organic Honey Almond Granola 12oz    | Snacks & Confectionery | CRITICAL_RESTOCK       |              0 |                     25 |                      73 |                        99 |                  277.2 |
+| SKU-GROC-0024 | Atlantic Salmon Fillet 1lb           | Meat & Seafood         | CRITICAL_RESTOCK       |              1 |                     12 |                      27 |                        36 |                  266.4 |
+| SKU-GROC-0001 | Whole Milk 1 Gallon                  | Dairy & Eggs           | CRITICAL_RESTOCK       |              0 |                     31 |                      78 |                       106 |                  254.4 |
+| SKU-GROC-0002 | Organic Large Brown Eggs 12ct        | Dairy & Eggs           | CRITICAL_RESTOCK       |              9 |                     27 |                      77 |                        95 |                  247   |
+| SKU-GROC-0023 | Ground Beef 80/20 1lb                | Meat & Seafood         | CRITICAL_RESTOCK       |              0 |                     18 |                      58 |                        79 |                  244.9 |
+| SKU-GROC-0044 | Organic Cold Brew Coffee 32oz        | Beverages              | CRITICAL_RESTOCK       |              0 |                     20 |                      58 |                        79 |                  244.9 |
+| SKU-GROC-0041 | Roasted Salted Almonds 12oz          | Snacks & Confectionery | CRITICAL_RESTOCK       |              6 |                     20 |                      46 |                        57 |                  239.4 |
+| SKU-GROC-0003 | Salted Butter 16oz                   | Dairy & Eggs           | CRITICAL_RESTOCK       |              8 |                     26 |                      66 |                        82 |                  229.6 |
+
+## 3. Deadstock & Spoilage Risk Report
+*Isolated via unsupervised K-Means, DBSCAN, and hierarchical clusters without static cutoffs, with margin-calibrated dynamic markdowns.*
+
+| sku_id        | product_name                          | category         | product_health_tier   |   current_on_hand_stock |   avg_velocity |   days_of_inventory_remaining |   turn_ratio |   margin_pct | is_perishable   |   days_to_expiry_min |   recommended_markdown_pct | is_spoilage_threat   | recommended_action                            |
+|:--------------|:--------------------------------------|:-----------------|:----------------------|------------------------:|---------------:|------------------------------:|-------------:|-------------:|:----------------|---------------------:|---------------------------:|:---------------------|:----------------------------------------------|
+| SKU-GROC-0007 | Truffle Infused Goat Cheese 4oz       | Dairy & Eggs     | At-Risk / Deadstock   |                      85 |       0.280487 |                     196       |     0.135202 |     0.434291 | True            |                   -9 |                       0.37 | True                 | Flash Markdown 37% - Imminent Spoilage Window |
+| SKU-GROC-0027 | Wild Boar Salami Link 7oz             | Meat & Seafood   | At-Risk / Deadstock   |                      78 |       0.246803 |                     196       |     0.112002 |     0.462069 | True            |                  -10 |                       0.39 | True                 | Flash Markdown 39% - Imminent Spoilage Window |
+| SKU-GROC-0050 | Artisanal Sparkling Lavender Soda 4pk | Beverages        | At-Risk / Deadstock   |                      85 |       0.269543 |                     154       |     0.15919  |     0.443826 | False           |                  999 |                       0.33 | False                | Clearance Markdown 33% & Promotional Bundle   |
+| SKU-GROC-0021 | Romanesco Cauliflower Head            | Fresh Produce    | At-Risk / Deadstock   |                      28 |       0.283603 |                     152       |     0.166782 |     0.465776 | True            |                   -6 |                       0.34 | True                 | Flash Markdown 34% - Imminent Spoilage Window |
+| SKU-GROC-0060 | Beeswax Furniture Polish 8oz          | Household        | At-Risk / Deadstock   |                     109 |       0.252252 |                     133       |     0.162088 |     0.463148 | False           |                  999 |                       0.32 | False                | Clearance Markdown 32% & Promotional Bundle   |
+| SKU-GROC-0034 | Artisanal White Truffle Oil 250ml     | Pantry & Staples | At-Risk / Deadstock   |                     107 |       0.234732 |                     122.5     |     0.148877 |     0.519808 | False           |                  999 |                       0.34 | False                | Clearance Markdown 34% & Promotional Bundle   |
+| SKU-GROC-0020 | Dragon Fruit (Yellow Pitahaya)        | Fresh Produce    | At-Risk / Deadstock   |                      63 |       1.32767  |                      36.6897  |     0.947749 |     0.44206  | True            |                   -6 |                       0.19 | True                 | Flash Markdown 19% - Imminent Spoilage Window |
+| SKU-GROC-0012 | Gluten-Free Seeded Loaf               | Bakery           | At-Risk / Deadstock   |                      58 |       1.46648  |                      25.3077  |     1.18315  |     0.456366 | True            |                   -5 |                       0.19 | True                 | Flash Markdown 19% - Imminent Spoilage Window |
+| SKU-GROC-0024 | Atlantic Salmon Fillet 1lb            | Meat & Seafood   | Steady Staple         |                       1 |       5.95875  |                       3.71138 |     8.26239  |     0.430331 | True            |                   -3 |                       0.15 | True                 | Flash Markdown 15% - Imminent Spoilage Window |
+| SKU-GROC-0017 | Organic Roma Tomatoes 1lb             | Fresh Produce    | Steady Staple         |                       0 |       6.47166  |                       2.92174 |     8.8215   |     0.558233 | True            |                   -2 |                       0.2  | True                 | Flash Markdown 20% - Imminent Spoilage Window |
+| SKU-GROC-0019 | Fresh English Cucumber                | Fresh Produce    | Steady Staple         |                       0 |       6.37461  |                       2.90576 |     8.78951  |     0.604317 | True            |                    0 |                       0.21 | True                 | Flash Markdown 21% - Imminent Spoilage Window |
+| SKU-GROC-0010 | Butter Croissants 4-Pack              | Bakery           | Steady Staple         |                      12 |       6.49133  |                       2.79695 |    10.0981   |     0.529652 | True            |                   -2 |                       0.19 | True                 | Flash Markdown 19% - Imminent Spoilage Window |
+
+## 4. Strategic Co-Purchase Bundles (Apriori Market Basket Mining)
+*Cross-selling bundles designed to pair slow-movers with high-velocity anchors.*
+
+| primary_item                                                       | bundled_recommendation            |   support |   confidence |   lift | is_deadstock_liquidation_bundle   | bundle_strategy            |
+|:-------------------------------------------------------------------|:----------------------------------|----------:|-------------:|-------:|:----------------------------------|:---------------------------|
+| Organic Honey Almond Granola 12oz, Greek Yogurt Plain 32oz         | Organic Frozen Blueberries 16oz   |    0.0152 |       0.5212 | 6.2906 | False                             | Standard Basket Cross-Sell |
+| Organic Frozen Blueberries 16oz, Greek Yogurt Plain 32oz           | Organic Honey Almond Granola 12oz |    0.0152 |       0.498  | 6.0987 | False                             | Standard Basket Cross-Sell |
+| Honeycrisp Apples 3lb Bag, Greek Yogurt Plain 32oz                 | Organic Frozen Blueberries 16oz   |    0.0162 |       0.5038 | 6.0813 | False                             | Standard Basket Cross-Sell |
+| Honeycrisp Apples 3lb Bag, Organic Frozen Blueberries 16oz         | Greek Yogurt Plain 32oz           |    0.0162 |       0.495  | 6.0222 | False                             | Standard Basket Cross-Sell |
+| Organic Honey Almond Granola 12oz, Organic Frozen Blueberries 16oz | Greek Yogurt Plain 32oz           |    0.0152 |       0.4933 | 6.0021 | False                             | Standard Basket Cross-Sell |
+| Organic Bananas 1 Bunch, Greek Yogurt Plain 32oz                   | Organic Frozen Blueberries 16oz   |    0.0161 |       0.4968 | 5.9965 | False                             | Standard Basket Cross-Sell |
+| Organic Frozen Blueberries 16oz, Organic Bananas 1 Bunch           | Greek Yogurt Plain 32oz           |    0.0161 |       0.4924 | 5.9913 | False                             | Standard Basket Cross-Sell |
+| Organic Honey Almond Granola 12oz, Honeycrisp Apples 3lb Bag       | Organic Frozen Blueberries 16oz   |    0.0156 |       0.4922 | 5.9406 | False                             | Standard Basket Cross-Sell |

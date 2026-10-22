@@ -1,0 +1,4 @@
+model,best_params,test_rmse,test_mae,test_r2,cv_r2_mean,cv_r2_std,overfitting_gap,is_overfitting
+LinearRegression,{},0.221,0.0535,0.9996,0.9997,0.0001,0.0,False
+Ridge,{'alpha': 0.01},0.221,0.0536,0.9996,0.9997,0.0001,0.0,False
+Lasso,{'alpha': 0.001},0.2212,0.0543,0.9996,0.9997,0.0001,0.0,False
